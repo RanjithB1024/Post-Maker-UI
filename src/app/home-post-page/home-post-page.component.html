@@ -1,0 +1,60 @@
+<div class="home-page-main-container">
+    <div class="card post-card">
+        <img [src]='HOME_PAGE.PROFILE_IMAGE' [alt]='HOME_PAGE.PROFILE_IMAGE_ALT' class="imgprofile" />
+
+        <button class="btn post-button" (click)='openDialog()'>{{HOME_PAGE.POST_BUTTON_TEXT}}</button>
+    </div>
+
+   <div class="horizontal-line-text-container">
+    <h3>{{HOME_PAGE.BILVANTIS_POSTS}}</h3>
+    
+   </div>
+   <mat-accordion>
+    <mat-expansion-panel 
+      *ngFor="let panel of postData.response.result; let i = index" 
+      (opened)="togglePanel(i)" 
+      (closed)="togglePanel(i)"
+      [ngClass]="{'closed-panel': !isPanelOpen(i)}"
+      >
+      <mat-expansion-panel-header>
+        <mat-panel-title class="mat-panel-left-head-conatiner">
+          <img [src]='panel.image.url' [alt]='HOME_PAGE.PROFILE_IMAGE_ALT' class="panel-head-imgprofile" />
+          <div class="mat-panel-left-heading">
+            <span class="panel-title">{{ HOME_PAGE.CARD_TITLE }}</span>
+            <span class="panel-title-description">{{ HOME_PAGE.CARD_TITLE_DESCRIPTION }}</span>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="panel-content">
+        <div class="panel-description">
+          <p id="description" [ngClass]="{ 'collapsed': !isExpandedText }">
+            {{ panel.Description }}
+          </p>
+          <a href="#" (click)="toggleDescription($event)" *ngIf="isExpandedText">{{HOME_PAGE.SEE_MORE}}</a>
+          <a href="#" (click)="toggleDescription($event)" *ngIf="!isExpandedText">{{HOME_PAGE.SEE_LESS}}</a>
+        </div>
+        <img [src]='panel.image.url' alt='{{ panel.title }}' />
+        <h1>{{ counts[i] }}</h1>
+        <hr width="100%" size="2">
+        <div class="Reactions-conatiner">
+          <div class="inline-container">
+            <mat-icon class="material-icons-outlined thumbs-down Reaction-icons" (click)="incrementCount(i)"  [ngClass]="{ 'blue': isCountGreaterThanOne(i) }">{{HOME_PAGE.THUMS_UP_ICON}}</mat-icon>
+            <span>{{HOME_PAGE.LIKE_TEXT}}</span>
+          </div>
+          <div class="inline-container"  (click)="toggleCommentInput(i)">
+            <mat-icon class="material-icons-outlined comment-icon Reaction-icons">{{HOME_PAGE.COMMENT_ICON}}</mat-icon>
+            <span>{{HOME_PAGE.COMMENT_TEXT}}</span>
+          </div>
+          <div class="inline-container">
+            <mat-icon class="material-icons send-icon Reaction-icons">{{HOME_PAGE.SEND_ICON}}</mat-icon>
+            <span>{{HOME_PAGE.SEND_TEXT}}</span>
+          </div>
+        </div>
+        <div *ngIf="isCommentVisible.has(i)" class="comment-conatiner">
+          <input type="text" class="comment-input form-control form-rounded" placeholder="Enter your comment" />
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+

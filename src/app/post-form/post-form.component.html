@@ -1,0 +1,50 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+        <div class="post-form-main-container">
+            <div class="post-top-part-container">
+                <div class="post-form-top-left-container">
+                    <img [src]='POST_FORM.PROFILE_IMAGE' [alt]='POST_FORM.PROFILE_IMAGE_ALT' class="imgprofile" />
+                    <div class="post-form-top-sub-container">
+                        <span class="top-post-head fs-1">{{POST_FORM.BILVANTIS_POST}}</span>
+                        <span class="top-post-para">{{POST_FORM.POST_EVERY_THING}}</span>
+                    </div>
+                </div>
+                <mat-icon mat-dialog-close fontIcon="cancel"></mat-icon>
+            </div>
+
+            <textarea class="text-area-style" formControlName="message" (ngModelChange)="onTextChange($event)" [maxlength] = 'POST_FORM.TEXTAREA_MAX_LENGTH' [placeholder]='POST_FORM.TEXT_PLACEHOLDER'
+                (focus)="onFocus()" (blur)="onBlur()"></textarea>
+          
+            <div>
+                <div class="text-area-length-style">
+                    <p>{{textAreaCharactersLength}}/{{POST_FORM.TEXTAREA_MAX_LENGTH}}</p>
+                </div>
+            </div>
+            <emoji-mart class="emoji-mart" [set]="set" *ngIf="showEmojiPicker" (emojiSelect)="addEmoji($event)"
+                title="Pick your emoji…"></emoji-mart>
+            <div class="post-gallery-details-container">
+                <mat-icon (click)="toggleEmojiPicker()" class="emoji-button icons-opacity"
+                fontSet="material-icons-outlined">{{POST_FORM.SATISFIED_ICON}}</mat-icon>
+
+                <mat-icon (click)="toggleUploadImage()"
+                    class="icons-opacity">{{POST_FORM.PHOTO_LIBRARY_ICON}}</mat-icon>
+            </div>
+            <div class="mt-2" *ngIf="isUploadImage">
+                <div class="custom-dropzone" ngx-dropzone [accept]="'image/*'" (change)="onFileSelected($event)"
+                    [multiple]="false"> <ngx-dropzone-label>
+                        <div> <span> {{POST_FORM.DROP}}<span
+                                    style="color: #2929b3">{{POST_FORM.BROWSE}}</span>{{POST_FORM.UPLOAD_PNG}}</span>
+                        </div>
+                    </ngx-dropzone-label> <ngx-dropzone-image-preview ngProjectAs="ngx-dropzone-preview"
+                        *ngFor="let f of files" [file]="f" [removable]="true" (removed)="onRemove(f)">
+                        <ngx-dropzone-label>{{
+                            f.name }} ({{ f.type }})</ngx-dropzone-label> </ngx-dropzone-image-preview> </div>
+            </div>
+        </div>
+        <hr width="100%" size="2">
+        <div class="submit-post-container">
+            <button type="submit" [disabled]="!form.valid" [ngClass]="{'active': form.valid, 'inactive': !form.valid}"
+                class="post-submit-button">{{POST_FORM.POST_BUTTON_TEXT}}</button>
+        </div>
+    </form>
+</div>

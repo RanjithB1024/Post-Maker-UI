@@ -1,0 +1,174 @@
+.home-page-main-container{
+    height: 100vh;
+    overflow: scroll;
+    background-color: rgb(239, 237, 234);
+    padding-left: 25vw;
+    padding-right: 25vw;
+    padding-top: 20px;
+}
+
+.imgprofile {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.post-card{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.post-button{
+    border: 1px solid black;
+    margin-left: 10px;
+    width:90%;
+    height: 48px;
+    border-radius: 26px;
+    text-align: left;
+    color: rgb(119, 118, 118);
+    font-weight: 510;
+    font-size: 15px;
+}
+  
+.post-button:hover {
+    background-color: rgb(232, 232, 233);
+    color: rgb(36, 36, 36);
+ }
+
+ .closed-panel {
+    margin-bottom: 15px;
+}
+
+.horizontal-line-text-container{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+  
+  .panel-content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    margin-bottom: 15px;
+  }
+  
+  .panel-content p {
+    margin: 0;
+  }
+
+  mat-expansion-panel-header {
+    height: 80px !important ;
+   
+}
+
+.mat-panel-left-head-conatiner{
+    width : 50%;
+}
+
+.mat-panel-left-heading{
+    margin-left: 1rem;
+    width : 50%;
+}
+
+.panel-title{
+    font-size: 1.2rem;
+   
+}
+
+.panel-title-description{
+    font-size: 1rem;
+    opacity: 0.8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.panel-head-imgprofile {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.panel-description{
+    font-size: 1rem;
+    color: black;
+   margin-bottom: 1rem !important;
+    word-wrap: break-word;
+    opacity: 0.8;
+}
+
+.panel-description {
+    position: relative;
+    max-width: 100%;
+  }
+  
+  #description {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: 2.5rem; 
+    -webkit-line-clamp: 2; 
+  }
+  
+  #description.collapsed {
+    white-space: normal;
+    height: auto; 
+    overflow: visible; 
+    -webkit-line-clamp: unset;
+  }
+  
+  a {
+    display: block;
+    color: blue;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .send-icon {
+    transform: rotate(-45deg); 
+}
+
+.Reactions-conatiner{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.inline-container {
+    display: inline-flex;
+    align-items: center; 
+}
+
+.Reaction-icons {
+    margin-right: 5px;
+}
+
+.blue {
+    color: blue;
+}
+
+.comment-conatiner{
+    display: flex;
+}
+
+.comment-input{
+    border-radius: px solid ;
+    width: 80%;
+    margin-top: 2rem;
+}
+
+
+
+  
+
+  
+
+
