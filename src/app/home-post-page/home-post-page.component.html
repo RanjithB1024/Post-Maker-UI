@@ -28,7 +28,7 @@
       <div class="panel-content">
         <div class="panel-description">
           <p id="description" [ngClass]="{ 'collapsed': !isExpandedText }">
-            {{ panel.Description }}
+            {{ panel.description }}
           </p>
           <a href="#" (click)="toggleDescription($event)" *ngIf="isExpandedText">{{HOME_PAGE.SEE_MORE}}</a>
           <a href="#" (click)="toggleDescription($event)" *ngIf="!isExpandedText">{{HOME_PAGE.SEE_LESS}}</a>

@@ -42,6 +42,7 @@ export class HomePostPageComponent implements OnInit {
   fetchingPostDetails(){
     this.socialPostService.fetchingPostDetails().subscribe(
       (response) => {  
+        console.log("response",response)
         this.postData = response;
       }
     );
