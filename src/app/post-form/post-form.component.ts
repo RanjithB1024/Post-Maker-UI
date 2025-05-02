@@ -3,6 +3,7 @@ import { POST_FORM } from '../constants/constants';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SocialPostService } from '../services/social-post.service';
 import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-post-form',
   templateUrl: './post-form.component.html',

@@ -11,7 +11,7 @@
    </div>
    <mat-accordion>
     <mat-expansion-panel 
-      *ngFor="let panel of postData.response.result; let i = index" 
+      *ngFor="let panel of postData?.response?.result; let i = index" 
       (opened)="togglePanel(i)" 
       (closed)="togglePanel(i)"
       [ngClass]="{'closed-panel': !isPanelOpen(i)}"

@@ -1,3 +1,4 @@
+
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
@@ -27,7 +28,7 @@
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
-              "../bilvantis-social-post/node_modules/@ctrl/ngx-emoji-mart/picker.css",
+"node_modules/@ctrl/ngx-emoji-mart/picker.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
