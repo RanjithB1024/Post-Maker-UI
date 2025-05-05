@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-const baseUrl = 'https://postmakerapi.vercel.app/v0.1';
+const baseUrl = 'https://post-maker-api-sm99.onrender.com/v0.1';
 
 
 @Injectable({
