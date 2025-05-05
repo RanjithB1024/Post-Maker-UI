@@ -5,7 +5,7 @@ export const ROUTE_STRINGS = {
 export const HOME_PAGE = {
     PROFILE_IMAGE : 'assets/ProfileImage.png',
     PROFILE_IMAGE_ALT : 'Profile',
-    POST_BUTTON_TEXT : 'Start a Post, Try Writing With AI',
+    POST_BUTTON_TEXT : 'We are hiring talented individuals from our trusted circle',
     CARD_TITLE : 'Bilvantis',
     CARD_TITLE_DESCRIPTION : 'Bilvnatis Technologies LLP',
     SEE_MORE : '...See More',
@@ -16,7 +16,7 @@ export const HOME_PAGE = {
     SEND_ICON : 'send',
     THUMS_UP_ICON : 'thumb_up',
     LIKE_TEXT : 'Like',
-    BILVANTIS_POSTS : 'Bilvantis Posts'
+    INNOVAPPTIVE_POSTS : 'innovapptive Job Openings'
 
 
     // DETAILS : [
@@ -79,8 +79,8 @@ export const POST_FORM = {
     PROFILE_IMAGE_ALT : 'Profile',
     PROFILE_IMAGE : 'assets/ProfileImage.png',
     TEXT_PLACEHOLDER : 'What do you want to talk about?',
-    BILVANTIS_POST : 'Bilvantis Post',
-    POST_EVERY_THING : 'Post Every Thing',
+    INNOVAPPTIVE : 'Innovapptive',
+    POST_EVERY_THING : 'Lets Hire!!',
     SATISFIED_ICON : 'sentiment_satisfied_alt',
     SELECT_IMAGE_DIRECTION : 'Select the Image>>',
     BROWSE : 'browse',
