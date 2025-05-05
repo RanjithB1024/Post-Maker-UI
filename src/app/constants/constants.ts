@@ -7,7 +7,7 @@ export const HOME_PAGE = {
     PROFILE_IMAGE_ALT : 'Profile',
     POST_BUTTON_TEXT : 'We are hiring talented individuals from our trusted circle',
     CARD_TITLE : 'Innovapptive',
-    CARD_TITLE_DESCRIPTION : 'Innovapptive Hiring!!',
+    CARD_TITLE_DESCRIPTION : 'Innovapptive - Hiring',
     SEE_MORE : '...See More',
     SEE_LESS : 'See Less',
     COMMENT_TEXT : 'Comment',
