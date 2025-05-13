@@ -19,7 +19,6 @@ export default function HomePage() {
         })();
     }, []);
     const createPost = async () => {
-        alert("api")
         if (!content.trim()) return;
         await fetch(`${BASE_URL}/posts`, {
             method: 'POST',
