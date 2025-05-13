@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 // Define the base URL as a constant
-const BASE_URL = 'http://localhost:5000/api';
+const BASE_URL = 'https://post-maker-api-4.onrender.com/api';
 
 export default function HomePage() {
     const [posts, setPosts] = useState([]);
