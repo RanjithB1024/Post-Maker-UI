@@ -90,12 +90,7 @@ export default function HomePage() {
                         className="h-10"/>
                 </div>
             </header>
-            {posts.length === 0 ? (
-                <p>Loading...</p>
-            ) : (
-                <>
-                    <div className="max-w-2xl mx-auto pt-20">
-                        <div className="bg-white shadow-sm rounded-lg p-4 mb-6">
+            <div className="bg-white shadow-sm rounded-lg p-4 mb-6 mt-8 max-w-2xl mx-auto">
                             <textarea
                                 className="w-full p-3 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 placeholder="What's on your mind?"
@@ -113,6 +108,12 @@ export default function HomePage() {
                         <div className="font-medium text-gray-700 mb-4">
                             Total Posts: {posts.length}
                         </div>
+            {posts.length === 0 ? (
+                <p>Loading...</p>
+            ) : (
+                <>
+                    <div className="max-w-2xl mx-auto pt-20 mt-5">
+                       
 
                         {posts.map((post: any) => (
                             <div key={post.id} className="bg-white shadow-sm rounded-lg p-4 mb-6">
